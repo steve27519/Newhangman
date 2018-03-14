@@ -1,0 +1,14 @@
+.intro {
+    width: 650px;
+    
+            
+}
+
+.lettersGuessed {
+    font: dodgerblue;
+
+}
+
+.incorrectGuess {
+    font: red;
+}
