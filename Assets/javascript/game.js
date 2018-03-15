@@ -1,32 +1,102 @@
-// Name List
-var players = ["Babe Ruth", "Jim Brown", "Hank Aaron", "Michael Jordan", "Joe Montana", "Peyton Manning", "Jerry Rice", "Larry Bird", "Ty Cobb", "Derek Jeter"];
-// Letters and Guesses
+// Names
 
-// Name selection
+window.onload = function () {
+    var players = ["baberuth", "jimbrown", "hankaaron", "michaeljordan", "joemontana", "peytonnanning", "jerryrice", "larrybird", "tycobb", "derekjeter"];
+    var playerName ;
 
-var playerName = players[Math.floor(Math.random() * (players.length))];
-console.log(playerName);
+    var selectedName = "";
+    var lettersInName = [];
+    
 // Variables
+var blanks = 0;
+var totalLetters = [];
+var incorrectGuesses = [];
+var guessedLetters = [];
+var numberGuesses = 9;
 
+// counters
 var wins = 0;
-console.log("wins", wins);
+
 var losses = 0;
-console.log("losses", losses);
+
 var parts = 7;
 
-var letterSpaces = [];
-
-
-var randomName = "";
-
-var guessedLetters = [];
-
-var incorrectGuesses = [];
-
-
-for (var i = 0; i < playerName.length; i++) {
-    letterSpaces.push("_")
+for (var i = 0; i < blanks; i++) {
+    totalLetters.push("-");
 }
+console.log(totalLetters);
+numberGuesses = 9;
+
+function play (){
+   playerName = players[Math.floor(Math.random() * (players.length))];
+    console.log(playerName);
+    for (var i = 0; i < playerName.length; i++) {
+        letterSpaces.push("_");
+    }
+    
+lettersInName = playerName.split("");
+numBlanks = lettersInName.length;
+console.log(numBlanks)
+console.log(playerName)
+    lettersInChosenName = chosenNord.split("");
+ 
+totalLetters = [];
+incorrectGuesses = [];
+for (var i = 0; i < numSpaces; i++) {
+    totalLetters.push("_");
+      }
+console.log(totalLetters);
+
+
+document.getElementById("guesses-left").innerHTML = numGuesses;
+ 
+
+document.getElementById("word-blanks").innerHTML = totalLetters.join(" ");
+ 
+   
+document.getElementById("wrong-guesses").innerHTML = incorrectGuesses.join(" ");
+ }
+
+ function letterCheck(letter) {
+     var letterInName = false;
+     for (var i = 0; i < numSpaces; i++) {
+ 
+        if (selectedName[i] === letter) {
+            letterInName = true; }
+        }
+    for (var j= 0; j < numSpaces; j++) {
+        if (playerName[j] === letter) {
+            totalLetters[j] = letter;
+        }
+    
+    else {
+        incorrectGuesses.push(letter);
+    }
+    numberGuesses--;
+
+    function roundOver() {
+
+    }
+
+    
+   
+  document.getElementById("numberGuesses").innerHTML = numberGuesses;
+ 
+  
+  document.getElementById("spaces").innerHTML = totalLetters.join(" ");
+
+  
+  document.getElementById("incorrectguesses").innerHTML = incorrectGuesses.join(" ");
+
+  if (lettersInChosenName).tostring() === totalGuesses.tostring ()) {
+      winCounter++;
+      alert("You won the game!!");
+  }
+
+  startGame();
+}
+
+  else if ()
 
 
 //Game over
@@ -76,7 +146,26 @@ function updatedIncorrectGuess() {
     document.getElementById("user-parts").innerHTML = partsLeft;
 }
 
+    
+
+// capture key presses
+// store previous guesses
+// identify/store correct guesses
+    // append correct guesses to blank spaces
+
+// count number of guesses used (right / wrong)
+
+// win condition / loss condition
+// check answer against random word
+// reset function
 document.onkeyup = function (event) {
     console.log(event.key);
 }
+
 // console.log(updatedIncorrectGuess);
+}
+
+// Letters and Guesses
+
+
+

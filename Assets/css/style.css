@@ -12,3 +12,6 @@
 .incorrectGuess {
     font: red;
 }
+li {
+    display: inline;
+}
